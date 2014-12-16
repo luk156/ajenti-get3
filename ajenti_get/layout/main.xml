@@ -1,0 +1,46 @@
+<vc>
+    <body>
+    <pad> <!-- adds whitespace padding -->
+        <hc>
+            <right>
+            <button icon="cloud-download" id="update" text="Aggiorna" />
+            </right>
+        </hc>
+        <hc><!-- an overall plugin container panel -->
+
+            <formline text="Aggiungi istanza:">
+                <textbox id="text" />
+            </formline>
+
+            <button icon="plus" id="add" text="Aggiungi" />
+
+        </hc>
+        <vc id="bindroot">
+        <bind:collection bind="instances" id="get_istances">
+            <dt bind="__items">
+                <dtr>
+                    <dth text="Nome" />
+                    <dth text="Azioni" />
+                </dtr>
+            </dt>
+            <bind:template>
+
+                    <dtr>
+                        <dtd>
+                            <label bind="name" />
+                        </dtd>
+                        <dtd><hc>
+                            <right>
+                            <button icon="eraser" id="" text="Reset" />
+
+                            <button icon="gears" id="" text="Configurazione" /></right>
+                            </hc>
+                        </dtd>
+                    </dtr>
+
+            </bind:template>
+        </bind:collection>
+        </vc>
+    </pad>
+</body>
+</vc>
